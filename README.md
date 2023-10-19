@@ -1,6 +1,7 @@
 Projeto WEB para o desafio 1 -
 
-Passo a passo para rodar o projeto
+Passo a passo para rodar o projeto:
+
 1- Clonar / baixar projeto - https://github.com/lgambarinigmail/teste_parana_banco.git
 
 2 - Ter o Ruby instalado na sua maquina - https://rubyinstaller.org/downloads/
