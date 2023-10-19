@@ -1,68 +1,43 @@
-require 'httparty'
-require_relative '../helpers/Requests.rb'
+require 'watir'
 
-#GET
+require_relative '../helpers/DOM.rb'
 
-# / ---------------------- /////// -------------------------------------- / 
 
-Dado('que busco informações de um usuario') do
-  Requests::select_get_user()
+Dado('que estou na home do Challenging DOM') do
+  Dom::tela_inicial()
 end
 
-Quando('seleciono o usuario') do 
-  Requests::get_user()
+Quando('seleciono o botão azul') do
+  Dom::botao_azul()
 end
 
-Então('vejo que as informações buscadas foram retornadas') do
-  Requests::get_validation()
+Quando('seleciono o botão vermelho alert') do
+  Dom::botao_vermelho()
 end
 
-# / ---------------------- /////// -------------------------------------- / 
-
-#POST
-
-Dado('que crio as informações de um usuario') do
-  Requests::create_user()
+Quando('seleciono o botão Verde sucesso') do
+  Dom::botao_verde()
 end
 
-Quando('seleciono o usuario criado') do
-  Requests::post_user()
-end
-
-Então('vejo que as informações criadas foram retornadas') do
-  Requests::post_validation()
-  end
-# / ---------------------- /////// -------------------------------------- / 
-
-
-#PUT
-
-Dado('que altero as informações de um usuario') do
-  Requests::update_user()
-end
-
-Quando('seleciono o usuario alterado') do
-    Requests::put_user()
-end
-
-Então('vejo que as informações alteradas foram retornadas') do
-  Requests::put_validation()
+Então('vejo que a resposta foi alterada') do
+  Dom::validacao_botao()
 end
 
 # / ---------------------- /////// -------------------------------------- / 
 
-#Exclusão 
 
-Dado('que as informações de um usuario foram deletadas') do
-  Requests::delete_user()
+Quando('clico no botão edit') do
+  Dom::botao_edit()
 end
 
-Quando('seleciono o usuario deletado') do
-  Requests::delete_selected_user()
+Quando('clico no botão delete') do
+  Dom::botao_delete()
 end
 
-Então('vejo que as informações não foram retornadas') do
-  Requests::delete_validation()
+Então('vejo que a URL foi alterada para edit') do
+  Dom::validacao_edit()
 end
 
-# / ---------------------- /////// -------------------------------------- / 
+Então('vejo que a URL foi alterada para delete') do
+  Dom::validacao_delete()
+end
