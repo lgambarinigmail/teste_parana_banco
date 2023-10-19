@@ -51,7 +51,7 @@ end
 
 # / ---------------------- /////// -------------------------------------- / 
 
-#Exclusão 
+#Delete 
 
 Dado('que as informações de um usuario foram deletadas') do
   Requests::delete_user()
