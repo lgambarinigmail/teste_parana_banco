@@ -10,7 +10,9 @@ Passo a passo para rodar o projeto
   gem install bundler
 
 4 - Instalar as gemas: 
+
   bundle install
 
 5 - Rodar a automação: 
+
   cucumber -t @all
