@@ -17,3 +17,7 @@ Passo a passo para rodar o projeto:
 5 - Rodar a automação: 
 
   cucumber -t @all
+
+PS. Lembrando que é importante antes de executar a automação, verificar a versão do seu navegador Chrome.
+O arquivo do ChromeDriver que esta nesta automação é compativel com o navegador Chrome na Versão 118.0.5993.89 (Versão oficial) 64 bits
+
